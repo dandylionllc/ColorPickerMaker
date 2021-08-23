@@ -40,19 +40,19 @@ class ColorModel: ObservableObject {
     
     @Published var valuesInRGBA: RGBValues = (1.0,0.0,0.0,1.0) {
         didSet {
-            setColor(colorSpace.RGBA)
+            setColor(colorSpace: .RGBA)
         }
     }
     
     @Published var valuesInHSBA : HSBAValues = (1.0, 1.0, 1.0, 1.0) {
         didSet {
-            setColor(colorspace: .HSBA)
+            setColor(colorSpace: .HSBA)
         }
     }
     
     @Published var valuesInCMYKA : CMYKAValues = (0.5, 0.5, 0.5, 0.0, 1.0) {
         didSet {
-            setColor(colorspace: .CMYKA)
+            setColor(colorSpace: .CMYKA)
         }
     }
     
