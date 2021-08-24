@@ -10,7 +10,7 @@ import SwiftUI
 
 // Stores one color and its accompanying parameters
 
-class ColorModel: ObservableObject {
+class VM_Color: ObservableObject {
     
     // a tuple of RGB parameters and their values
     typealias RGBValues = (red: Double, green: Double, blue: Double, alpha: Double)
