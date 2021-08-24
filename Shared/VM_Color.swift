@@ -1,6 +1,6 @@
 //
-//  ColorModel.swift
-//  ColorModel
+//  VM_Color.swift
+//  Color ViewModel
 //
 //  Created by Frank Cipolla on 8/22/21.
 //
