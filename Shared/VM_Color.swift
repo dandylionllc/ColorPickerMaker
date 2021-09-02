@@ -13,13 +13,13 @@ import SwiftUI
 class VM_Color: ObservableObject {
     
     // a tuple of RGB parameters and their values
-    typealias RGBValues = (red: Double, green: Double, blue: Double, alpha: Double)
+    typealias RGBAValues = (red: Double, green: Double, blue: Double, alpha: Double)
     
     // a tuple of HSB parameters and their values
     typealias HSBAValues = (hue: Double, saturation: Double, brightness: Double, alpha: Double)
     
     // a tuple of CMYK parameters and their values
-    typealias CMYKAValues = (cyan: Double, magenta: Double, Yellow: Double, black: Double, alpha: Double)
+    typealias CMYKAValues = (cyan: Double, magenta: Double, yellow: Double, black: Double, alpha: Double)
     
     // a tuple of greyscale parameters and their values
     typealias GreyscaleValues = (white: Double, alpha: Double)
@@ -38,7 +38,7 @@ class VM_Color: ObservableObject {
         }
     }
     
-    @Published var valuesInRGBA: RGBValues = (1.0,0.0,0.0,1.0) {
+    @Published var valuesInRGBA: RGBAValues = (1.0,0.0,0.0,1.0) {
         didSet {
             setColor(colorSpace: .RGBA)
         }
@@ -71,7 +71,7 @@ class VM_Color: ObservableObject {
     // Sets the color according to which color space is adjusted
     func setColor() {
         switch colorSpace {
-        case .HSBA:
+        case .HSBA
             color = Color.fromValues(valuesInHSBA)
         case .RGBA:
             color = Color.fromValues(valuesInRGBA)
